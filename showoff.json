@@ -1,0 +1,12 @@
+{
+  "name": "Spring MVC 3.1 Walkthrough",
+  "description": "A comprehensive walk-through of what's new and noteworthy in Spring MVC",
+  "sections": [
+    {"section":"intro"},
+    {"section":"java-config"},
+    {"section":"infrastructure"},
+    {"section":"redirect"},
+    {"section":"uri-vars"},
+    {"section":"end"}
+  ]
+}
