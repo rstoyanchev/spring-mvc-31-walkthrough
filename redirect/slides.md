@@ -9,7 +9,7 @@
 ## A new controller method argument
 
 !SLIDE smaller
-# E.g.
+# Example
 
     @@@ java
 
@@ -23,13 +23,13 @@
         }
 
 !SLIDE bullets incremental
-# Two cases for using it
+# The two main cases
 
-* Append params to redirect URL
-* Add flash attributes
+* Redirect URL query parameters
+* Flash attributes
 
 !SLIDE smaller
-# E.g.
+# Redirect URL query params
 
     @@@ java
 
@@ -47,27 +47,27 @@
 
 !SLIDE bullets
 # Redirects to
-### _(note formatted date)_
 
 * `/someUrl?id=123&date=03/21/2012`
 
-!SLIDE
-## What if you wanted to avoid
-## "polluting" the URL?
+### _(note the DataBinder-formatted date value)_
 
 !SLIDE
-## Or had a complex object you'd
-## rather not pass as an id?
+## What if you wanted keep the URL free of
+## some parames that "pollute" the URL?
+
+!SLIDE
+## Or had a complex object you wanted to store
+## temporarily until after the redirect?
 
 !SLIDE bullets incremental
 # Flash attributes
 
-* Pass attributes across a redirect
-* Not involving the URL
-* Access them after the redirect
+* A way to pass attributes across a redirect
+* Without involving the URL
 
 !SLIDE smaller
-# E.g.
+# Before the redirect
 
     @@@ java
 
@@ -86,16 +86,16 @@
 # After the redirect
 
 * Nothing special to do
-* Flash attributes are in the model
-* But won't survive a refresh(!)
+* Flash attributes should be in the model
+* But won't survive another refresh
+* "Consumed" immediately
 
 !SLIDE bullets incremental
-# About flash storage
+# Flash storage
 
-* `FlashMapManager` abstraction
-* HTTP Session implementation
-* Cookie-based planned
-* See <a href="https://jira.springsource.org/browse/SPR-8997">SPR-8997</a>
+* `SessionFlashMapManager` used by default
+* Cookie-based implementation
+* Planned <a href="https://jira.springsource.org/browse/SPR-8997">SPR-8997</a>
 
 
 

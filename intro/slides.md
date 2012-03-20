@@ -6,47 +6,48 @@
 ### _SpringSource, VMware_
 
 !SLIDE bullets center
-# What's New?
-
-* All Java based web config
-
-!SLIDE bullets center
-# What's New?
-
-* All new @MVC support classes
+# Overview
+* All Java-based web config
 
 !SLIDE bullets center
-# What's New?
-
-* Redirect and Flash Attributes
+# Overview
+* New @MVC support classes
 
 !SLIDE bullets center
-# What's New?
+# Overview
+* Redirect and flash attributes
 
+!SLIDE bullets center
+# Overview
 * Improved content negotiation
 
 !SLIDE bullets center
-# What's New?
-
-* URI variables in more places
+# Overview
+* URI variable support in new places
 
 !SLIDE bullets center
-# And plenty more!
-<br>
-<br>
-### Method-level validation `@Validated`,
-### `UriComponentsBuilder`,
-### `@RequestPart`,
-### Method args of type `javax.servlet.http.Part`,
-### `HttpPutFormContentFilter`,
-### `RequestDataValueProcessor` for <a href="http://hdiv.org/">HDIV</a> integration
-### Etc.
+# Overview
+* Partial validation with `@Validated`
 
-!SLIDE
-## Also this Thursday at 4pm<br>
-<br>
-## <a href="http://devnexus.com/s/presentations#id-1321">"An In-depth Look At Spring MVC 3.1"</a>
+!SLIDE bullets center
+# Overview
+* Improved URI building and encoding
+* `UriComponentsBuilder`, <br> `ServletUriComponentsBuilder`
 
+!SLIDE bullets center
+# Overview
+* New controller method arguments <br> for multipart requests
+* `@RequestPart`, <br> `javax.servlet.http.Part`
 
+!SLIDE bullets center
+# Overview
+* Support for HTTP PUT form submissions
+* `HttpPutFormContentFilter`
+
+!SLIDE bullets center
+# Overview
+* Support for encoding and signing URLs
+* `RequestDataValueProcessor`
+* Used by <a href="http://hdiv.org/">HDIV</a>
 
 

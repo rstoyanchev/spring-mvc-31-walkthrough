@@ -6,7 +6,9 @@
     {"section":"java-config"},
     {"section":"infrastructure"},
     {"section":"redirect"},
+    {"section":"content-negotiation"},
     {"section":"uri-vars"},
+    {"section":"more"},
     {"section":"end"}
   ]
 }

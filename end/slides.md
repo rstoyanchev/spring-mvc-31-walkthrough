@@ -11,17 +11,15 @@
 * `@Resource` stereotype <a href="https://jira.springsource.org/browse/SPR-8406">SPR-8406</a>
 * Content negotiation refinements <a href="https://jira.springsource.org/browse/SPR-8410">SPR-8410</a>
 * Global `@ExceptionHandler` methods
-* ...
-
-!SLIDE
-# Get Involved!
+* And much more!
 
 !SLIDE incremental bullets small
+# How to get involved
 
-* The Spring Framework <a href="https://github.com/SpringSource/spring-framework#readme">now on Github</a>
+* The Spring Framework now <a href="https://github.com/SpringSource/spring-framework#readme">on Github</a>
 * <a href="https://github.com/SpringSource/spring-framework-issues#readme">spring-framework-issues</a> repository
-* New Gradle-based build (<a href="https://github.com/SpringSource/spring-framework/wiki/Gradle-build-and-release-FAQ">Wiki</a>)
-* New SpringSource repository (<a href="https://github.com/SpringSource/spring-framework/wiki/SpringSource-repository-FAQ">Wiki</a>)
+* Gradle-based build (<a href="https://github.com/SpringSource/spring-framework/wiki/Gradle-build-and-release-FAQ">wiki</a>)
+* New SpringSource repository (<a href="https://github.com/SpringSource/spring-framework/wiki/SpringSource-repository-FAQ">wiki</a>)
 * <a href="https://jira.springsource.org/browse/SPR">Spring JIRA</a>
 
 !SLIDE
@@ -34,5 +32,3 @@
 <br />
 ## Rossen Stoyanchev
 ### Twitter: <a href="http://twitter.com/rstoya05">@rstoya05</a>
-
-

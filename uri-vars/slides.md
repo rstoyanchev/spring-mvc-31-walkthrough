@@ -3,29 +3,24 @@
 # URI Variables In More Places
 
 !SLIDE small
-# URI variables &
-# data binding
+# URI variables in data binding
 
     @@@ java
+    
+    // GET /manu/chao
 
 	@RequestMapping(value="/{firstName}/{lastName}")
-	public String search(Person person,
+	public String search(@ModelAttribute Person person,
                          BindingResult result) {
 
-        // person.getFirstName() is populated
-        // person.getLastName()  is populated
-
-        if (result.hasErrors()) {
-            return "search";
-        }
-
-        // ...
+        // "manu".equals(person.getFirstName())
+        // "chao".equals(person.getLastName())
 
 	}
 
 !SLIDE incremental bullets small
-# `@PathVariable` values
-# in views
+# `@PathVariable` values available
+# in the model for rendering
 
     @@@java
 
@@ -33,13 +28,13 @@
     @RequestMapping("/apps/edit/{slug}")
     public String editForm(@PathVariable String slug){
 
-
+        // ...
 
     }
 
 !SLIDE small transition=fade
-# `@PathVariable` values
-# in views
+# `@PathVariable` values available
+# in the model for rendering
 
     @@@java
 
@@ -54,23 +49,17 @@
 !SLIDE small bullets incremental
 # `@PathVariable` values
 
-* Merged in the model prior to rendering
-* Except for "automated" view types
-* E.g, JSON, XML
+* Values merged into the model prior to rendering
+* Except for "automated" content generation <br> like JSON & XML
 
 !SLIDE small
-# URI Variables in `"redirect:"`
+# URI variables in redirect strings
 
     @@@java
 
-    @RequestMapping(
-        value="/{year}/{month}/{slug}/rooms",
-        method=RequestMethod.POST)
-
+    @RequestMapping(value="/{year}/{month}/{slug}",
+                    method=RequestMethod.POST)
     public String createRoom() {
-
-
-
 
 
 
@@ -79,89 +68,89 @@
     }
 
 !SLIDE small
-# URI Variables in `"redirect:"`
+# URI variables in redirect strings
 
     @@@java
 
-    @RequestMapping(
-        value="/{year}/{month}/{slug}/rooms",
-        method=RequestMethod.POST)
-
+    @RequestMapping(value="/{year}/{month}/{slug}",
+                    method=RequestMethod.POST)
     public String createRoom() {
 
-
         // No need to add "year", "month", "slug"
-
-
 
 
         return "redirect:/{year}/{month}/{slug}";
     }
 
 !SLIDE small
-# URI Variables in `"redirect:"`
+# URI variables in redirect strings
 
     @@@java
 
-    @RequestMapping(
-        value="/{year}/{month}/{slug}/rooms",
-        method=RequestMethod.POST)
-
+    @RequestMapping(value="/{year}/{month}/{slug}",
+                    method=RequestMethod.POST)
     public String createRoom() {
 
-
         // No need to add "year", "month", "slug"
-
-        // Expanded from model attributes
-
+        // to the the model explicitly
 
         return "redirect:/{year}/{month}/{slug}";
     }
 
 !SLIDE
-# `@ModelAttribute`
-# Instantiated from
-# URI Variable
-
-!SLIDE
-
-    @@@ java
-
-
-    @RequestMapping(
-            value="/{account}", 
-            method = RequestMethod.PUT)
-
-    public String update(Account account) {
-
-
-
-
-    }
-
-!SLIDE transition=fade
-
-    @@@ java
-
-
-    @RequestMapping(
-            value="/{account}", 
-            method = RequestMethod.PUT)
-
-    public String update(Account account) {
-
-        // Account retrieved from database
-        // via Converter<String, Account>
-
-    }
-
+## `@ModelAttribute` ..
+## instantiated from a URI variable
 
 !SLIDE incremental bullets small
-# `@ModelAttribute` from
-# URI Variable
-## _(Conditions)_
+# Pre-requisites
+## (`@ModelAttribute` from a URI variable)
 
-* Model attribute must match URI variable or request param name
-* A `Converter<String, Account>` must be registered
+* Model attribute name matches URI variable name
+* A `Converter<String, ?>` is available
+* The converter can load object from database
+
+!SLIDE smaller
+# Example
+
+    @@@ java
+
+    @RequestMapping(value="/{account}", method = PUT)
+    public String update(@ModelAttribute Account account) {
+
+		// ...
+
+
+
+    }
+
+!SLIDE smaller
+# Example
+
+    @@@ java
+
+    @RequestMapping(value="/{account}", method = PUT)
+    public String update(@ModelAttribute Account account) {
+
+        // Model attribute name matches URI variable name
+        
+        
+
+    }
+
+
+!SLIDE smaller
+# Example
+
+    @@@ java
+
+    @RequestMapping(value="/{account}", method = PUT)
+    public String update(@ModelAttribute Account account) {
+
+        // Model attribute name matches URI variable name
+
+        // Converter<String, Account> is registered
+
+    }
+
 
 

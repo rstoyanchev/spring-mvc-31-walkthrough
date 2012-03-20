@@ -1,5 +1,5 @@
 !SLIDE subsection
-# All Java web config
+# Java web config
 
 !SLIDE incremental bullets
 # DispatcherServlet
@@ -250,26 +250,23 @@
 
 !SLIDE
 ## So far no Spring MVC beans in sight
+### (Configuration is imported rather than extended)
 
 !SLIDE bullets incremental
-# Kick into low gear
+# Shift into low gear
 
 * Remove `@EnableWebMvc` annotation
 * Change base class to `WebMvcConfigurationSupport`
-* Override `@Bean` methods
+* You're now extending the actual configuration
+* May override base class `@Bean` methods
 
 !SLIDE
-## More on Thursday @ 4pm<br>
-<br>
-## <a href="http://devnexus.com/s/presentations#id-1321">"An In-depth Look At Spring MVC 3.1"</a>
-
-!SLIDE
-# Replace `web.xml`
+# Replacing `web.xml`
 # with Java
 ### (Servlet 3.0)
 
 !SLIDE 
-## Simply create an implementation of `WebApplicationInitializer`
+## Create an implementation of `WebApplicationInitializer`
 
 !SLIDE smaller
 
@@ -293,7 +290,6 @@
       }
 
     }
-
 
 
 
