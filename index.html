@@ -681,7 +681,7 @@ public String save(@RequestBody Entity entity) {
 <ul>
 <li>What content will actually be produced?</li>
 <li>Previously depended on ..</li>
-<li>the order of <code>HttpMessageConvertet</code> registrations</li>
+<li>the order of <code>HttpMessageConverter</code> registrations</li>
 <li>Less control</li>
 <li>Harder to reason about</li>
 </ul>
@@ -897,7 +897,7 @@ public String update(@ModelAttribute Account account) {
 <pre class="sh_java"><code>
 @RequestMapping(method = RequestMethod.PUT)
 public String update(
-    @Valid(group=MyGroup.class) Account account) {
+    @Validated(group=MyGroup.class) Account account) {
 
     // ...
 
