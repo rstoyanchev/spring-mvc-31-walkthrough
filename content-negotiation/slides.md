@@ -50,7 +50,7 @@
 
 * What content will actually be produced?
 * Previously depended on .. 
-* the order of `HttpMessageConvertet` registrations
+* the order of `HttpMessageConverter` registrations
 * Less control
 * Harder to reason about
 

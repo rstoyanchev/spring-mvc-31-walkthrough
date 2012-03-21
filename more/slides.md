@@ -9,7 +9,7 @@
 
     @RequestMapping(method = RequestMethod.PUT)
     public String update(
-        @Valid(group=MyGroup.class) Account account) {
+        @Validated(group=MyGroup.class) Account account) {
 
 		// ...
 
